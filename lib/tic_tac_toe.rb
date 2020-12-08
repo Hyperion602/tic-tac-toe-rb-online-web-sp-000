@@ -22,12 +22,10 @@ def input_to_index(user_input)
   converted_input = (user_input.to_i) - 1
 end
 
-def move(board, input, current_player)
-  def update_array_at_with(board, input, current_player)
-    board[input] = current_player(board)
-  end
-  update_array_at_with(board, input, current_player(board))
+def move(board, index, player)
+   board[index] = player
 end
+
 WIN_COMBINATIONS = [
   [0,1,2],
   [3,4,5],
