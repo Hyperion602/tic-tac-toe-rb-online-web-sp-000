@@ -74,3 +74,15 @@ def winner(board)
     return board[won?(board)[0]]
   end
 end
+
+def turn(board)
+  puts "Please enter 1-9:"
+  user_input = gets.strip
+  input = input_to_index(user_input)
+  if valid_move?(board, input)
+    move(board, input, value = 'X')
+  else
+    turn(board)
+  end
+    display_board(board)
+end
